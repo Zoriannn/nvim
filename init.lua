@@ -18,3 +18,5 @@ vim.keymap.set("n", "dd", '"_dd', { noremap = true })
 -- Cmd + s for saving files
 vim.keymap.set("n", "<D-s>", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<D-s>", "<Esc>:w<CR>a", { noremap = true, silent = true })
+
+vim.opt.autoread = true
