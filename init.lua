@@ -1,5 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+require("lspconfig").ts_ls.setup({})
 
 function Transparent(color)
   color = color or "tokyonight"
@@ -18,5 +19,7 @@ vim.keymap.set("n", "dd", '"_dd', { noremap = true })
 -- Cmd + s for saving files
 vim.keymap.set("n", "<D-s>", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<D-s>", "<Esc>:w<CR>a", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "d", '"_d', { noremap = true })
+vim.keymap.set("n", "dd", '"_dd', { noremap = true })
 
 vim.opt.autoread = true
